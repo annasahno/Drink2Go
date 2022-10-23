@@ -1,0 +1,89 @@
+.card {
+  margin-bottom: 20px;
+  padding: 40px 20px 20px 20px;
+  display: grid;
+  grid-template-areas:
+    "image image"
+    "title title"
+    "description description"
+    "price button";
+  grid-template-columns: 1fr 142px;
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    padding: 50px 30px 30px 30px;
+  }
+}
+
+.card__link-image {
+  grid-area: image;
+  text-decoration: none;
+  justify-self: center;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.card__link-title {
+  grid-area: title;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card__title {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 1.8;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+}
+
+.card__description {
+  grid-area: description;
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 14px;
+  line-height: 1.4;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.card__price {
+  grid-area: price;
+  margin: 0;
+  align-self: center;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.card__button {
+  grid-area: button;
+  padding-left: 46px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  background-image: url("../img/icons/add-basket.svg");
+  background-repeat: no-repeat;
+  background-position: 20px;
+  font-size: 14px;
+  line-height: 1.17;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

@@ -1,0 +1,38 @@
+.contact__title {
+  margin-bottom: 24px;
+}
+
+.contact__address,
+.contact__phone {
+  padding-left: 20px;
+  margin-bottom: 18px;
+  display: block;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.3;
+  color: inherit;
+  text-decoration: none;
+
+  &::before {
+    content: "";
+    width: 13px;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+  }
+}
+
+.contact__phone {
+  margin-bottom: 22px;
+  display: block;
+}
+
+.contact__address::before {
+  background-image: url("../img/icons/address.svg");
+}
+
+.contact__phone::before {
+  background-image: url("../img/icons/phone.svg");
+}

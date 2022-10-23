@@ -1,0 +1,37 @@
+.copyright {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 12px;
+  line-height: 1.1;
+  color: $color-base-grey;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+}
+
+.copyright__text {
+  display: inline;
+  margin-right: 2px;
+}
+
+.copyright__link {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    color: $color-base-primary;
+  }
+
+  &:active {
+    color: $color-primary-darker;
+  }
+}
+
+.copyright__icon {
+  vertical-align: middle;
+  color: inherit;
+}

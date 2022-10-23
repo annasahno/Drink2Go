@@ -1,0 +1,38 @@
+.button {
+  display: inline-block;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $color-base-white;
+  background-color: $color-base-primary;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: $color-primary-lighter;
+  }
+
+  &:active {
+    background-color: $color-primary-darker;
+  }
+
+  &:disabled {
+    background-color: $color-base-grey;
+  }
+}
+
+.button--secondary {
+  background-color: $color-base-white;
+  color: $color-base-primary;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:disabled {
+    color: $color-base-white;
+  }
+}

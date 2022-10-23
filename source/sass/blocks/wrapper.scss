@@ -1,0 +1,121 @@
+.wrapper {
+  min-width: 280px;
+
+  @include side-margin;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1360px;
+  }
+
+  &--slide {
+    display: grid;
+    grid-template-areas:
+      "image image"
+      "badge badge"
+      "title title"
+      "description description"
+      "price link";
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      grid-template-areas:
+        "badge badge"
+        "title title"
+        "description description"
+        "price link"
+        "image image";
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 1230px;
+      padding-top: 30px;
+      padding-bottom: 84px;
+      grid-template-areas:
+        "image badge badge"
+        "image title title"
+        "image description description"
+        "image price link";
+      grid-template-columns: 1fr 230px 1fr;
+      grid-template-rows: auto minmax(80px, min-content) minmax(100px, min-content) max-content;
+      justify-items: start;
+      text-align: start;
+      column-gap: 30px;
+    }
+  }
+
+  &--features {
+    text-align: center;
+    margin-top: 52px;
+    margin-bottom: 58px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 60px;
+      margin-bottom: 98px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 100px;
+      margin-bottom: 120px;
+    }
+  }
+
+  &--catalog {
+    padding-top: 40px;
+    padding-bottom: 42px;
+
+    @media (min-width: $tablet-width) {
+      width: 728px;
+      padding-top: 70px;
+      padding-bottom: 90px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 1360px;
+      padding-top: 88px;
+      padding-bottom: 120px;
+      display: grid;
+      grid-template-areas:
+        "label label"
+        "title title"
+        "filter sorting"
+        "filter catalog"
+        "filter pagination";
+      grid-template-columns: 318px 1fr;
+      column-gap: 30px;
+    }
+  }
+
+  &--footer {
+    margin: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 728px;
+      padding-top: 40px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "icons icons icons"
+        "navigation media contacts"
+        "copyright copyright copyright";
+      column-gap: 30px;
+      row-gap: 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 1360px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas:
+        "icons navigation media contacts"
+        "copyright copyright copyright copyright";
+      padding-top: 40px;
+      row-gap: 0;
+    }
+  }
+}

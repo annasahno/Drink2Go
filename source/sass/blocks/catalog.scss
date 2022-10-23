@@ -1,0 +1,143 @@
+.catalog {
+  background-color: $color-lightest-grey;
+}
+
+.catalog__label {
+  grid-area: label;
+  margin-bottom: 8px;
+}
+
+.catalog__title {
+  grid-area: title;
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 24px;
+  line-height: 1.42;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 42px;
+  }
+}
+
+.catalog__fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.catalog__sorting {
+  grid-area: sorting;
+  margin-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 26px;
+  }
+}
+
+.catalog__list {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 45px;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 64px;
+  }
+}
+
+.catalog__item {
+  background-color: $color-base-white;
+}
+
+.calatog__pagination-list {
+  padding: 0;
+  list-style: none;
+}
+
+.catalog__filter {
+  margin-bottom: 12px;
+  grid-area: filter;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 42px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.catalog__button-group {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
+    margin-top: 6px;
+    margin-right: 10px;
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 10px;
+    margin-right: 0;
+    justify-content: space-between;
+  }
+}
+
+.catalog__button {
+  margin-bottom: 24px;
+  padding: 14px;
+  width: 160px;
+  font-size: 13px;
+  line-height: 1.5;
+
+  &--reset {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-right: 30px;
+    padding: 10px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 150px;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+.catalog__pagination {
+  grid-area: pagination;
+}

@@ -1,0 +1,137 @@
+.range__controls {
+  margin-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 6px;
+    margin-bottom: 35px;
+  }
+}
+
+.range__scale {
+  position: relative;
+  height: 2px;
+  background-color: $color-light-grey;
+}
+
+.range__bar {
+  width: 240px;
+  position: absolute;
+  height: 4px;
+  left: 2px;
+  background-color: $color-primary-lighter;
+
+  &--disabled {
+    background-color: $color-base-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 180px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 278px;
+    left: -4px;
+  }
+}
+
+.range__toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: -10px;
+  border-radius: 50%;
+  border: 2px solid $color-primary-lighter;
+  background-color: $color-base-white;
+  cursor: pointer;
+
+  &--min {
+    left: -2px;
+  }
+
+  &--max {
+    right: -18px;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    background-color: $color-primary-opacity;
+  }
+
+  &:active::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    background-color: $color-base-primary;
+  }
+}
+
+.range__bar--disabled .range__toggle {
+  border-color: $color-base-grey;
+  cursor: auto;
+
+  &::before {
+    display: none;
+  }
+}
+
+.range__inputs {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background-color: $color-base-grey;
+    border-radius: 50%;
+    top: 18px;
+    left: calc(50% - 4px);
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 6px;
+    margin-right: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-bottom: 32px;
+  }
+}
+
+.range__input {
+  width: 118px;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  border: 2px solid $color-primary-lighter;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: inherit;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 500;
+  /* stylelint-disable-next-line */
+  -moz-appearance: textfield;
+
+  @media (min-width: $tablet-width) {
+    width: 92px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
+}

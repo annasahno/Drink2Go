@@ -1,0 +1,152 @@
+.slide {
+  padding-top: 20px;
+  padding-bottom: 58px;
+
+  &::before {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    content: "";
+  }
+
+  &--flat-white::before {
+    background-color: $color-flat-white;
+  }
+
+  &--latte::before {
+    background-color: $color-lavender-latte;
+  }
+
+  &--espresso::before {
+    background-color: $color-espresso;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 50px;
+    padding-bottom: 0;
+
+    &::before {
+      height: 640px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+
+    &::before {
+      height: 100%;
+    }
+  }
+}
+
+.slide__image-wrapper {
+  grid-area: image;
+  justify-self: center;
+}
+
+.slide__image {
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: 476px;
+    margin-top: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+    margin-top: 0;
+  }
+}
+
+.slide__badge {
+  grid-area: badge;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: flex-end;
+  }
+}
+
+.slide__title {
+  grid-area: title;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
+    font-size: 56px;
+    line-height: 1.2;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.slide__description {
+  grid-area: description;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    line-height: 1.6;
+  }
+}
+
+.slide__description br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+  }
+}
+
+.slide__price {
+  grid-area: price;
+  margin-left: 6px;
+  align-self: center;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 20px;
+    justify-self: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: flex-start;
+  }
+}
+
+.slide__price-old {
+  display: inline-block;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $color-base-primary;
+  text-decoration: line-through;
+}
+
+.slide__price-new {
+  display: inline-block;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.slide__link {
+  grid-area: link;
+  justify-self: start;
+  align-self: flex-start;
+}
