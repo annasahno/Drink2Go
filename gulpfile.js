@@ -124,12 +124,14 @@ export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
+  copyImages,
   gulp.parallel(styles, html, scripts, sprite, svg)
 );
 
 export default gulp.series(
   clean,
   copy,
+  optimizeImages,
   copyImages,
   gulp.parallel(styles, html, scripts, sprite, svg),
   gulp.series(server, watcher)
